@@ -42,6 +42,9 @@ Used to reload configuration files for the service
 ##### List all failed units
 `systemctl --failed`
 
+##### Manage a remote host with systemd
+`systemctl -H root@remotehost status httpd.service`
+
 
 ## Changing the default boot target 
 ##### Show to current run level
@@ -52,6 +55,9 @@ Used to reload configuration files for the service
 
 ##### full graphics
 `systemctl set-default graphical.target`
+
+##### To change the target within the current session
+`systemctl isolate multi-user.target`
 
 ## journalctl
 ##### Show the logs for a service
