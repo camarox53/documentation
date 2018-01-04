@@ -1,7 +1,7 @@
 ## Look at the configuration of a switch port
 
 ##### Elevate your privileges 
-  $ enable
+  `$ enable`
 
 ##### Move to configuration mode
   `$ configure terminal`
