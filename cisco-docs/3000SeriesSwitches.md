@@ -1,99 +1,99 @@
 ## Look at the configuration of a switch port
 
-#####Elevate your privileges 
+##### Elevate your privileges 
   `$ enable`
 
-#####Move to configuration mode
+##### Move to configuration mode
   `$ configure terminal`
   
-#####Change to the interface of the port you want to edit
+##### Change to the interface of the port you want to edit
   `$ interface GigabitEthernet0/9`
   
-#####Look at the configuration of the port
+##### Look at the configuration of the port
   `$ show interface Gi0/9 switchport`
   
-#####Leave the switch
+##### Leave the switch
   `$ exit`
 
-##Set a switch port into trunking mode
+## Set a switch port into trunking mode
 
-#####Elevate your privileges
+##### Elevate your privileges
   ` $ enable`
   
-#####Move to configuration mode
+##### Move to configuration mode
   ` $ configure terminal`
   
-#####Change to the interface of the port you want to edit
+##### Change to the interface of the port you want to edit
   ` $ interface GigabitEthernet0/9`
   
-#####Change the switch port mode to trunk
+##### Change the switch port mode to trunk
 ` $ switchport mode trunk`
 
-#####Leave config mode
+##### Leave config mode
   ` $ exit`
   
-#####Verify your changes are correct
+##### Verify your changes are correct
   ` $ show interface Gi0/9 switchport`
   
-#####Make configuration permanent
+##### Make configuration permanent
   ` $ copy running-config startup-config`
   
-#####Leave the switch
+##### Leave the switch
   ` $ exit`
 
-##Set the native vlan on a switch port
+## Set the native vlan on a switch port
 
-#####Elevate your privileges
+##### Elevate your privileges
   ` $ enable`
   
-#####Move to configuration mode
+##### Move to configuration mode
   ` $ configure terminal`
   
-#####Change to the interface of the port you want to edit
+##### Change to the interface of the port you want to edit
   ` $ interface GigabitEthernet0/9`
-#####  Change the switchport to trunk mode
+##### Change the switchport to trunk mode
   ` $ switchport mode trunk`
-#####  Set your native vlan
+##### Set your native vlan
   ` $ switchport trunk native vlan 183`
-#####  Leave config mode
+##### Leave config mode
   ` $ exit`
-#####  Verify your changes are correct
+##### Verify your changes are correct
   ` $ show interface Gi0/9 switchport`
-#####  Make configuration permanent
+##### Make configuration permanent
   ` $ copy running-config startup-config`
-#####  Leave the switch
+##### Leave the switch
   ` $ Exit`
 
-##Set the allowed vlan range for a switch port
+## Set the allowed vlan range for a switch port
 
-#####Elevate your privileges
+##### Elevate your privileges
         $ enable
         
-#####Move to configuration mode
+##### Move to configuration mode
         $ configure terminal
         
-#####Change to the interface of the port you want to edit
+##### Change to the interface of the port you want to edit
         $ interface GigabitEthernet0/9
         
-#####Change the switchport to trunk mode
+##### Change the switchport to trunk mode
         $ switchport mode trunk
         
-#####[Optional] - Set native vlan
+##### [Optional] - Set native vlan
         $ switchport trunk native vlan 183
         
-######Without this, all untagged traffic will be dropped by the switch
+###### Without this, all untagged traffic will be dropped by the switch
 
-#####Allow all the vlan ranges that you will need
+##### Allow all the vlan ranges that you will need
         $ switchport trunk allowed vlan 180-185
         
-#####Leave config mode
+##### Leave config mode
         $ exit
         
-#####Verify your changes are correct
+##### Verify your changes are correct
         $ show interface Gi0/9 switchport
         
-#####Make configurations permanent
+##### Make configurations permanent
         $ copy running-config startup-config
         
-####  Leave the switch
+#### Leave the switch
         $ exit
