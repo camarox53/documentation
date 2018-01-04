@@ -1,4 +1,4 @@
-##Look at the configuration of a switch port
+## Look at the configuration of a switch port
 
 #####Elevate your privileges 
   `$ enable`
